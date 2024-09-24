@@ -5,13 +5,13 @@ head(sdac)
 
 # Configurações do diretório de trabalho e compilação do modelo em C++
 library(TMB)
-setwd("C:\\Users\\Estudante\\Desktop\\Iniciação Científica\\Gama Unitária\\Aplicação final")
+setwd(" ") # incluir o caminho do arquivo aqui 
 
 compile("gama_unitaria.cpp")
 dyn.load(dynlib("gama_unitaria"))
 
 # Carregando a matriz do modelo e preparando dados
-matriz_modelo = read.table("C:\\Users\\Estudante\\Desktop\\Iniciação Científica\\Gama Unitária\\Aplicação final\\MatrizModeloGU.txt",header = F)
+matriz_modelo = read.table("...\\MatrizModeloGU.txt",header = F) # incluir o caminho do arquivo aqui 
 X = as.matrix(matriz_modelo[,-1])
 Y = sdac$rcd
 dados_gu = list(Y = Y, X = X)
